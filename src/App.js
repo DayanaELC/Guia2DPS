@@ -1,25 +1,33 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
-function App() {
+import './Saludo';
+import Saludo from './Saludo';
+
+import Form from './components/Form';
+
+const App = () => {
+  var nombre = 'Dayana Lopez';
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  <div className="App">
+    <div className="App-content">
+      <Saludo></Saludo>
+      <p>
+        {HolaMundo(nombre, 23)}
+      </p>
+      <Form/>
     </div>
+  </div>
   );
 }
-
 export default App;
+
+function HolaMundo(nombre, edad){
+  var presentacion = <div>
+    <h2>Mi nombre es {nombre}</h2>
+    <h2>Mi edad actual es {edad}</h2>
+    <h2>Soy estudiante de ingeniería en ciencias de la computación</h2>
+  </div>
+
+  return presentacion;
+}
