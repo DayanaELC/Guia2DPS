@@ -15,7 +15,10 @@ const App = () => {
       <p>
         {HolaMundo(nombre, 23)}
       </p>
-      <Form/>
+      <p>
+        Aqui haremos nuestro TO-DO list
+      </p>
+      <Form/> 
     </div>
   </div>
   );
